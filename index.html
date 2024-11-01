@@ -1,11 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lab 5: Audio and Video</title>
-</head>
-<body>
-    
-</body>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Lab 5: Audio and Video</title>
+		<link rel="stylesheet" href="styles.css" />
+		<script src="./scripts/audio_script.js" defer></script>
+		<script src="./scripts/video_script.js" defer></script>
+	</head>
+	<body>
+		<div id="audio-player">
+			<h1>Enjoy musical fruits!</h1>
+
+			<select id="audio_select">
+				<option>Select a fruit to listen to...</option>
+				<option value="./audible.com/apple.ogg">Apple</option>
+				<option value="./audible.com/banana.mp3">Banana</option>
+				<option value="./audible.com/cherry.mp3">Cherry</option></select
+			><br />
+
+			<audio controls id="audio">
+				<source src="./audible.com/apple.ogg" type="audio/ogg" />
+				<source src="./audible.com/banana.mp3" type="audio/mpeg" />
+				<source src="./audible.com/cherry.mp3" type="audio/mpeg" />
+
+				<p>Your browser doesn't support this audio file.</p>
+			</audio>
+		</div>
+		<br />
+
+		<div id="video-player">
+			<h1>Check out this stacky dude running!</h1>
+			<video controls id="video">
+				<source src="./stacky dude/tallmanrun.mp4" type="video/mp4" />
+				<source src="./stacky dude/tallmanrun.webm" type="video/webm" />
+
+				<track
+					default
+					kind="captions"
+					src="./stacky dude/tallmanrun.vtt"
+					srclang="en"
+					label="English"
+				/></video
+			><br />
+			<div id="video-controls">
+				<button id="btnPlay" class="control">Play</button>
+				<button id="btnStop" class="control">Stop</button>
+				<button id="btnToggleMute" class="control">Toggle Mute</button>
+				<select id="playback_speed">
+					<option value="0.5">0.5x</option>
+					<option value="1" selected>Normal Speed</option>
+					<option value="1.5">1.5x</option>
+				</select>
+				<button id="btnRwd" class="control">Rewind</button>
+				<button id="btnFwd" class="control">Fast Forward</button>
+				<button id="btnRestart" class="control">Play from Start</button>
+			</div>
+		</div>
+	</body>
 </html>
